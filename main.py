@@ -1,4 +1,3 @@
-## Run selenium and chrome driver to scrape data from cloudbytes.dev
 import time
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -55,7 +54,7 @@ button = html.find_element(By.CLASS_NAME, 'btn')
 # Click the button
 button.click()
 
-# Wait for script to excute
+# Wait for script to execute
 time.sleep(3)
 
 # Find the confirm button
