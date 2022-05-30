@@ -8,7 +8,6 @@ At any rate a periodic restart seems to fix these issues.
 ## Setup
 
 ----
-<br>
 
 ### Step 1
 
