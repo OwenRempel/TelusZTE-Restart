@@ -8,7 +8,7 @@ from selenium.webdriver.chrome.options import Options
 
 password = 'admin'
 url = 'http://192.168.0.1'
-chromdriverPath = "./chromedriver/stable/chromedriver"
+chromedriverPath = "./chromedriver/stable/chromedriver"
 
 # Setup chrome options
 chrome_options = Options()
@@ -16,7 +16,7 @@ chrome_options.add_argument("--headless") # Ensure GUI is off
 chrome_options.add_argument("--no-sandbox")
 
 # Set path to chromedriver as per your configuration
-webdriver_service = Service(chromdriverPath)
+webdriver_service = Service(chromedriverPath)
 
 # Choose Chrome Browser
 browser = webdriver.Chrome(service=webdriver_service, options=chrome_options)
