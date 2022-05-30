@@ -7,7 +7,7 @@ At any rate a periodic restart seems to fix these issues.
 
 ## Setup
 
-----
+
 
 ### Step 1
 
