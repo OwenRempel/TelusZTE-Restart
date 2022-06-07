@@ -4,7 +4,7 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
 dpkg -i google-chrome-stable_current_amd64.deb
 
-apt --fix-broken install
+apt --fix-broken install -y
 
 mkdir RouterReboot
 
@@ -18,7 +18,7 @@ mkdir -p "chromedriver/stable" && \
 unzip -q "chromedriver_linux64.zip" -d "chromedriver/stable" && \
 chmod +x "chromedriver/stable/chromedriver"
 
-apt install python3 python3-pip
+apt install python3 python3-pip -y
 
 pip3 install selenium
 
