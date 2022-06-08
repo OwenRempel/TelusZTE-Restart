@@ -1,17 +1,17 @@
 #!/bin/bash
 
 echo 'Updating system'
-apt update -qq -y > /dev/null && apt upgrade -qq -y &> /dev/null
+apt-get update -qq -y > /dev/null && apt-get upgrade -qq -y > /dev/null
 
 echo 'Installing required packages'
-apt install curl unzip python3 python3-pip -qq -y &> /dev/null
+apt-get install curl unzip python3 python3-pip -qq -y > /dev/null
 
 echo 'Downloading Chrome'
 wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
 dpkg -i google-chrome-stable_current_amd64.deb > /dev/null
 
-apt --fix-broken install -qq -y &> /dev/null
+apt-get --fix-broken install -qq -y > /dev/null
 
 mkdir RouterReboot
 
