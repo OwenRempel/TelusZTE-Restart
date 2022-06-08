@@ -1,3 +1,10 @@
+# Router Reset
+
+# This script resets the Telus SmartHub ZTE
+# Allowing for programmatic restarting of the hub to improve performance
+
+# Author Owen Rempel  © 2022
+
 import time
 import os
 from selenium import webdriver
