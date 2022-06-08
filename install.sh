@@ -7,7 +7,7 @@ echo 'Installing required packages'
 apt install curl unzip python3 python3-pip -qq -y
 
 echo 'Downloading Chrome'
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
 dpkg -i google-chrome-stable_current_amd64.deb
 
@@ -27,7 +27,7 @@ unzip -q "chromedriver_linux64.zip" -d "chromedriver/stable" && \
 chmod +x "chromedriver/stable/chromedriver"
 
 echo 'Installing Selenium'
-pip3 install selenium
+pip3 -q install selenium
 
 echo 'Downloading Main Script'
-wget https://raw.githubusercontent.com/OwenRempel/TelusZTE-Restart/master/main.py
+wget -q https://raw.githubusercontent.com/OwenRempel/TelusZTE-Restart/master/main.py
