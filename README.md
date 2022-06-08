@@ -5,8 +5,14 @@ I am unsure as to why this is the case. Perhaps the device doesn't implement a g
 
 At any rate a periodic restart seems to fix these issues.
 
-## Setup
 
+## One line install
+
+```bash
+wget https://raw.githubusercontent.com/OwenRempel/TelusZTE-Restart/master/install.sh && bash install.sh
+```
+
+## Manual Setup
 
 
 ### Step 1
@@ -19,17 +25,22 @@ This step is mostly for linux as if you are running this on a windows computer y
 sudo apt update && sudo apt upgrade
 ```
 
-2. Download the latest version of chrome for linux
+2. Download any required packages
+```bash
+sudo apt install python3 python3-pip curl unzip
+```
+
+3. Download the latest version of chrome for linux
 ```bash
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 ```
-3. Install <code>.deb</code> file
+4. Install <code>.deb</code> file
 
 ```bash
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 ```
 
-4. Fix any missing dependency's
+5. Fix any missing dependency's
 ```bash
 sudo apt --fix-broken install
 ```
@@ -68,7 +79,12 @@ chmod +x "chromedriver/stable/chromedriver"
 ### Step 3
 <br>
 
-1. Update you settings in <code>main.py</code>
+1. Install Selenium
+```bash
+pip3 install selenium
+```
+
+2. Update you settings in <code>main.py</code>
 
 ```python
 password = 'youPassword'
