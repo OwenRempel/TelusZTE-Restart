@@ -89,7 +89,7 @@ pip3 install selenium
 ```python
 password = 'youPassword'
 url = 'http://192.168.0.1'
-chromedriverPath = "./chromedriver/stable/chromedriver"
+chromedriverPath = "chromedriver/stable/chromedriver"
 ```
 
 

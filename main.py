@@ -12,11 +12,16 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 
+# This gets the real path of the script so that no matter where you run
+# it from the path to the chromedriver will be correct
 scriptPath = "/".join(os.path.realpath(__file__).split('/')[:-1])
 
 password = 'admin'
 url = 'http://192.168.0.1'
-chromedriverPath = os.path.join(scriptPath, "chromedriver/stable/chromedriver")
+chromedriverPath = "chromedriver/stable/chromedriver"
+
+# Join the two paths together
+chromedriverGlobalPath = os.path.join(scriptPath, chromedriverPath)
 
 # Setup chrome options
 chrome_options = Options()
@@ -24,7 +29,7 @@ chrome_options.add_argument("--headless") # Ensure GUI is off
 chrome_options.add_argument("--no-sandbox")
 
 # Set path to chromedriver as per your configuration
-webdriver_service = Service(chromedriverPath)
+webdriver_service = Service(chromedriverGlobalPath)
 
 # Choose Chrome Browser
 browser = webdriver.Chrome(service=webdriver_service, options=chrome_options)
