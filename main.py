@@ -1,13 +1,15 @@
 import time
+import os
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 
+scriptPath = "/".join(os.path.realpath(__file__).split('/')[:-1])
 
 password = 'admin'
 url = 'http://192.168.0.1'
-chromedriverPath = "./chromedriver/stable/chromedriver"
+chromedriverPath = os.path.join(scriptPath, "chromedriver/stable/chromedriver")
 
 # Setup chrome options
 chrome_options = Options()
