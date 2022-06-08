@@ -17,10 +17,10 @@ mkdir RouterReboot
 
 cd RouterReboot
 
-chrome_driver=$(curl "https://chromedriver.storage.googleapis.com/LATEST_RELEASE") 
+chrome_driver=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE") 
 
 echo 'Downloading ChromeDriver'
-curl -Lo chromedriver_linux64.zip "https://chromedriver.storage.googleapis.com/${chrome_driver}/chromedriver_linux64.zip"
+curl -Lo -s chromedriver_linux64.zip "https://chromedriver.storage.googleapis.com/${chrome_driver}/chromedriver_linux64.zip"
 
 mkdir -p "chromedriver/stable" && \
 unzip -q "chromedriver_linux64.zip" -d "chromedriver/stable" && \
