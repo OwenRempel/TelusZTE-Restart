@@ -22,8 +22,12 @@ chrome_driver=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELE
 echo 'Downloading Chromedriver'
 curl -s -Lo chromedriver_linux64.zip "https://chromedriver.storage.googleapis.com/${chrome_driver}/chromedriver_linux64.zip"
 
-mkdir -p "chromedriver/stable" && \
-unzip -q "chromedriver_linux64.zip" -d "chromedriver/stable" && \
+mkdir -p "chromedriver/stable" 
+
+unzip -q "chromedriver_linux64.zip" -d "chromedriver/stable"
+
+rm chromedriver_linux64.zip
+
 chmod +x "chromedriver/stable/chromedriver"
 
 echo 'Installing Selenium'
