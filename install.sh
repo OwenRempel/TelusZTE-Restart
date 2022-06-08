@@ -19,7 +19,7 @@ cd RouterReboot
 
 chrome_driver=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE") 
 
-echo 'Downloading ChromeDriver'
+echo 'Downloading Chromedriver'
 curl -s -Lo chromedriver_linux64.zip "https://chromedriver.storage.googleapis.com/${chrome_driver}/chromedriver_linux64.zip"
 
 mkdir -p "chromedriver/stable" && \
@@ -31,3 +31,4 @@ pip3 -q install selenium
 
 echo 'Downloading Main Script'
 wget -q https://raw.githubusercontent.com/OwenRempel/TelusZTE-Restart/master/main.py
+
