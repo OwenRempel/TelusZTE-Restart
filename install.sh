@@ -35,6 +35,8 @@ chmod +x "chromedriver/stable/chromedriver"
 echo 'Installing Selenium'
 pip3 -q install selenium
 
-echo 'Downloading Main Script'
+echo 'Downloading Main Script and Update Script'
 wget -q https://raw.githubusercontent.com/OwenRempel/TelusZTE-Restart/master/main.py
+
+wget -q https://raw.githubusercontent.com/OwenRempel/TelusZTE-Restart/master/update.sh
 

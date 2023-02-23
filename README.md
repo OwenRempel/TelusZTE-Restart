@@ -9,7 +9,7 @@ At any rate a periodic restart seems to fix these issues.
 ## One line install
 
 ```bash
-wget https://raw.githubusercontent.com/OwenRempel/TelusZTE-Restart/master/install.sh && bash install.sh
+wget https://raw.githubusercontent.com/OwenRempel/TelusZTE-Restart/master/install.sh && sudo bash install.sh
 ```
 
 ## Manual Setup
